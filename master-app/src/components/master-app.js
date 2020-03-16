@@ -33,9 +33,13 @@ const MasterApp = props => {
       ) : (
         <div>
           <p>Click buttons to load micro apps</p>
-          <p>ISSUE:</p>
           <p>
-            Begin with any app is OK. However, click another app will get error:{' '}
+            Expected App 1 available at http://localhost:8001, App 2 at
+            http://localhost:8002
+          </p>
+          <p>
+            ISSUE: Begin with any app is OK. However, click another app will get
+            error.
           </p>
           <p>
             Uncaught SyntaxError: Identifier 'HOOK_MOUNT' has already been
