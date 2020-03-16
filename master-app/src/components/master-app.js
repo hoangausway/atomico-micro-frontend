@@ -39,19 +39,22 @@ export default customElement('master-app', MasterApp)
 
 // Helpers HTML
 const prompt = () => (
-  <div>
-    <p>Click buttons to load micro apps</p>
+  <div className='prompt'>
+    <p>Click buttons to load micro apps.</p>
     <p>
       Expected App 1 available at http://localhost:8001, App 2 at
       http://localhost:8002
     </p>
+    <hr />
     <p>
-      ISSUE: Begin with any app is OK. However, click another app will get
-      error.
+      <span>ISSUE:</span> Begin with any app is OK. However, click another app
+      will get error.
     </p>
     <p>
-      Uncaught SyntaxError: Identifier 'HOOK_MOUNT' has already been declared at
-      constants.js:1
+      <span>
+        Uncaught SyntaxError: Identifier 'HOOK_MOUNT' has already been declared
+        at constants.js:1
+      </span>
     </p>
   </div>
 )
@@ -71,5 +74,11 @@ const style = () => `
     height: 95vh
     background: red;
     color: white;
+  }
+  .prompt {
+    font-size: 0.8rem;
+  }
+  span {
+    color: red;
   }
 `
