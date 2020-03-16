@@ -1,4 +1,4 @@
-import { h, customElement, useState, useEffect, useRef } from 'atomico'
+import { h, customElement, useState } from 'atomico'
 
 import './app-header'
 import './micro-app'
@@ -28,25 +28,7 @@ const MasterApp = props => {
         <button onclick={e => setApp(apps[0])}>Atomico App 1</button>
         <button onclick={e => setApp(apps[1])}>Atomico App 2</button>
       </div>
-      {app ? (
-        <micro-app app={app} />
-      ) : (
-        <div>
-          <p>Click buttons to load micro apps</p>
-          <p>
-            Expected App 1 available at http://localhost:8001, App 2 at
-            http://localhost:8002
-          </p>
-          <p>
-            ISSUE: Begin with any app is OK. However, click another app will get
-            error.
-          </p>
-          <p>
-            Uncaught SyntaxError: Identifier 'HOOK_MOUNT' has already been
-            declared at constants.js:1
-          </p>
-        </div>
-      )}
+      {app ? <micro-app app={app} /> : prompt()}
     </host>
   )
 }
@@ -54,6 +36,25 @@ const MasterApp = props => {
 MasterApp.props = {}
 
 export default customElement('master-app', MasterApp)
+
+// Helpers HTML
+const prompt = () => (
+  <div>
+    <p>Click buttons to load micro apps</p>
+    <p>
+      Expected App 1 available at http://localhost:8001, App 2 at
+      http://localhost:8002
+    </p>
+    <p>
+      ISSUE: Begin with any app is OK. However, click another app will get
+      error.
+    </p>
+    <p>
+      Uncaught SyntaxError: Identifier 'HOOK_MOUNT' has already been declared at
+      constants.js:1
+    </p>
+  </div>
+)
 
 // Helpers CSS
 const style = () => `
