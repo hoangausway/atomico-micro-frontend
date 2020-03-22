@@ -48,6 +48,7 @@ const loadApp = (app, container) => {
 const addAppScript = (src, type, container) => {
   const newScript = document.createElement('script')
   newScript.src = src
+  newScript.type = 'module'
   newScript.onload = () => renderApp(type, container)
   document.head.appendChild(newScript)
 }

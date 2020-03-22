@@ -15,8 +15,8 @@ export default customElement('atomico-app1', AtomicoApp1)
 // Helpers CSS
 const style = () => `
 :host {
-  width: 100%;
-  height: 100vh;
+  width: 500px;
+  height: 500px;
   color: green;
 }
 `
