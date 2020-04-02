@@ -45,17 +45,6 @@ const prompt = () => (
       Expected App 1 available at http://localhost:8001, App 2 at
       http://localhost:8002
     </p>
-    <hr />
-    <p>
-      <span>ISSUE:</span> Begin with any app is OK. However, click another app
-      will get error.
-    </p>
-    <p>
-      <span>
-        Uncaught SyntaxError: Identifier 'HOOK_MOUNT' has already been declared
-        at constants.js:1
-      </span>
-    </p>
   </div>
 )
 

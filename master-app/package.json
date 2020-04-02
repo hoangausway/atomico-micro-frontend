@@ -10,10 +10,9 @@
     "prepare": "npm run build"
   },
   "dependencies": {
-    "atomico": "^0.19.0",
-    "xstate": "^4.8.0"
+    "atomico": "^0.21.1"
   },
   "devDependencies": {
-    "bundle-cli": "^0.21.2"
+    "bundle-cli": "^0.21.5"
   }
 }
