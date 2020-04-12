@@ -7,7 +7,6 @@
     "build": "bundle index.html dist",
     "build:web-components": "bundle src/components/*-*.js web-components --external",
     "dev": "bundle index.html dist --watch --server",
-    "prepare": "npm run build"
   },
   "dependencies": {
     "atomico": "^0.21.1"
