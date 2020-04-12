@@ -18,5 +18,5 @@ cd micro-app1 && npm run dev
 #### Then at another Terminal: run micro-app2
 ```bash
 cd micro-app2 && npm run dev
-# the micro-app2 will run at port 8001
+# the micro-app2 will run at port 8002
 ```
